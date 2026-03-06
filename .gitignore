@@ -1,0 +1,181 @@
+# ========== Visual Studio / .NET / MAUI (.gitignore for VS2022 + MAUI) ==========
+
+# Build outputs
+[Bb]in/
+[Oo]bj/
+**/bin/
+**/obj/
+out/
+publish/
+artifacts/
+dist/
+
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+.vsconfig
+
+# Visual Studio cache & task data
+.vs/TaskCache/
+.vs/Store/
+.vs/.suo
+
+# Rider / JetBrains (in case someone uses it locally)
+.idea/
+*.sln.iml
+*.DotSettings.user
+_ReSharper*/
+
+# VS Code (if present)
+.vscode/
+
+# NuGet
+*.nupkg
+packages/
+.nuget/
+.nuget/packages/
+project.lock.json
+project.assets.json
+*.props.user
+
+# Rider / VS test / coverage
+TestResults/
+*.coverage
+*.coveragexml
+*.trx
+*.log
+
+# MSBuild generated
+*.ilk
+*.pdb
+*.cache
+*.pyc
+*.pidb
+*.mdb
+
+# Signing / keys / secrets (do NOT commit private keys/certs)
+*.pfx
+*.p12
+*.pem
+*.jks
+*.keystore
+keystore.properties
+secrets.json
+local.settings.json
+local.properties
+.env
+.env.* 
+secrets/*.json
+*/keys/
+
+# OS files
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+*~.nfs*
+
+# ========== MAUI / Xamarin / Mobile platform specifics ==========
+
+# General MAUI/Xamarin outputs (already covered but keep explicit)
+**/obj/**/android/
+**/bin/**/android/
+**/obj/**/ios/
+**/bin/**/ios/
+**/obj/**/maccatalyst/
+**/bin/**/maccatalyst/
+**/obj/**/tvos/
+**/bin/**/tvos/
+**/obj/**/windows/
+**/bin/**/windows/
+
+# Android
+local.properties            # contains SDK/NDK paths - local-only
+.gradle/
+.gradle-cache/
+**/.gradle/
+build/
+**/build/
+captures/
+*.apk
+*.ap_
+*.aab
+*.dex
+*.class
+*-debug.keystore
+*.keystore
+*.jks
+
+# iOS / Mac Catalyst / tvOS / Xcode
+*.xcworkspace
+*.xcuserdata/
+*.xcuserstate
+DerivedData/
+*.app
+*.app.dSYM
+*.dSYM
+*.ipa
+*.mobileprovision
+*.cer
+*.p12
+
+# CocoaPods
+Pods/
+Podfile.lock
+
+# Mac signing identities / provisioning
+*.mobileprovision
+*.cer
+
+# Windows / UWP / WinUI
+*.appx
+*.appxupload
+*.msix
+*.msixbundle
+Package.StoreAssociation.xml
+AppPackages/
+
+# .NET MAUI generated resources (if any intermediate generated dirs)
+Resources/Raw/*.resources.cache
+
+# ========== CI / Packaging / Tooling ==========
+# GitHub Actions / Azure / local CI artifacts
+.github/workflows/*.local
+.github/actions/*.local
+azure-pipelines.yml
+
+# JetBrains caches
+.idea/
+*.iml
+
+# Editor/IDE temp files
+*.swp
+*~.tmp
+
+# Logs
+*.log
+
+# Coverage / profiling
+coverage/
+coverage*.xml
+.vscode/.history/
+
+# ========== Optional / Project-specific guidance ==========
+# If you intentionally commit some generated assets (icons, prebuilt binaries, signed apks),
+# explicitly un-ignore them here. e.g.:
+# !release/myapp-signed.apk
+
+# If there are platform folders you want retained in repo, add exceptions like:
+# !Platforms/Android/SomeCheckedInFile
+
+# End of file
